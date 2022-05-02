@@ -29,7 +29,7 @@ func RandStringRunes(n int) string {
 	return string(b)
 }
 
-func konstruktor(lengthString int, lengthSlice int) []RandomData {
+func CreateBigData(lengthString int, lengthSlice int) []RandomData {
 
 	bigdata := []RandomData{}
 
