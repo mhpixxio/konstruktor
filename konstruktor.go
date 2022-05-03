@@ -3,6 +3,8 @@ package konstruktor
 import (
 	"math/rand"
 	"time"
+
+	pb "github.com/mhpixxio/pb"
 )
 
 type RandomData struct {
@@ -29,7 +31,7 @@ func RandStringRunes(n int) string {
 	return string(b)
 }
 
-func CreateBigData(lengthString int, lengthSlice int) []RandomData {
+func CreateBigData(lengthString int, lengthSlice int) []BigData {
 
 	bigdata := []RandomData{}
 
@@ -38,8 +40,18 @@ func CreateBigData(lengthString int, lengthSlice int) []RandomData {
 		bigdata = append(bigdata, random)
 	}
 
-	//fmt.Println(random)
-	//fmt.Println(bigdata)
+	return bigdata
+
+}
+
+func CreateBigData_proto(lengthString int, lengthSlice int) []BigData_proto {
+
+	datacontent := []*pb.RandomData{}
+
+	for i := 0; i < lengthSlice; i++ {
+		random := &pb.RandomData{a: RandStringRunes(lengthString), b: RandStringRunes(lengthString), c: RandStringRunes(lengthString), d: RandStringRunes(lengthString), e: RandStringRunes(lengthString), f: RandStringRunes(lengthString), g: RandStringRunes(lengthString)}
+		bigdata = append(bigdata, random)
+	}
 
 	return bigdata
 
