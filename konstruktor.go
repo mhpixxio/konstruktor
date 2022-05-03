@@ -31,7 +31,7 @@ func RandStringRunes(n int) string {
 	return string(b)
 }
 
-func CreateBigData(lengthString int, lengthSlice int) []BigData {
+func CreateBigData(lengthString int, lengthSlice int) []RandomData {
 
 	bigdata := []RandomData{}
 
@@ -44,12 +44,12 @@ func CreateBigData(lengthString int, lengthSlice int) []BigData {
 
 }
 
-func CreateBigData_proto(lengthString int, lengthSlice int) []BigData_proto {
+func CreateBigData_proto(lengthString int, lengthSlice int) []*pb.RandomData {
 
-	datacontent := []*pb.RandomData{}
+	bigdata := []*pb.RandomData{}
 
 	for i := 0; i < lengthSlice; i++ {
-		random := &pb.RandomData{a: RandStringRunes(lengthString), b: RandStringRunes(lengthString), c: RandStringRunes(lengthString), d: RandStringRunes(lengthString), e: RandStringRunes(lengthString), f: RandStringRunes(lengthString), g: RandStringRunes(lengthString)}
+		random := &pb.RandomData{A: RandStringRunes(lengthString), B: RandStringRunes(lengthString), C: RandStringRunes(lengthString), D: RandStringRunes(lengthString), E: RandStringRunes(lengthString), F: RandStringRunes(lengthString), G: RandStringRunes(lengthString)}
 		bigdata = append(bigdata, random)
 	}
 
