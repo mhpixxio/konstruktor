@@ -8,13 +8,13 @@ import (
 )
 
 type RandomData struct {
-	A string `json:"a"`
-	B string `json:"b"`
-	C string `json:"c"`
-	D string `json:"d"`
-	E string `json:"e"`
-	F string `json:"f"`
-	G string `json:"g"`
+	a string
+	b string
+	c string
+	d string
+	e string
+	f string
+	g string
 }
 
 func init() {
@@ -36,7 +36,7 @@ func CreateBigData(lengthString int, lengthSlice int) []RandomData {
 	bigdata := []RandomData{}
 
 	for i := 0; i < lengthSlice; i++ {
-		random := RandomData{A: RandStringRunes(lengthString), B: RandStringRunes(lengthString), C: RandStringRunes(lengthString), D: RandStringRunes(lengthString), E: RandStringRunes(lengthString), F: RandStringRunes(lengthString), G: RandStringRunes(lengthString)}
+		random := RandomData{a: RandStringRunes(lengthString), b: RandStringRunes(lengthString), c: RandStringRunes(lengthString), d: RandStringRunes(lengthString), e: RandStringRunes(lengthString), f: RandStringRunes(lengthString), g: RandStringRunes(lengthString)}
 		bigdata = append(bigdata, random)
 	}
 
