@@ -2,7 +2,7 @@ module github.com/mhpixxio/konstruktor
 
 go 1.18
 
-require github.com/mhpixxio/pb v0.0.0-20220503094508-4e77c669483b
+require github.com/mhpixxio/pb v0.0.0-20220517132220-ea1e154cd531
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
